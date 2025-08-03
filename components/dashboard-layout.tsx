@@ -16,7 +16,7 @@ import {
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu"
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet"
-import { CreditCard, LayoutDashboard, LogOut, Menu, TrendingUp } from "lucide-react"
+import { CreditCard, LayoutDashboard, LogOut, Menu, TrendingUp, Users } from "lucide-react"
 
 interface DashboardLayoutProps {
   children: React.ReactNode
@@ -29,6 +29,7 @@ export function DashboardLayout({ children }: DashboardLayoutProps) {
   const navigation = [
     { name: "Dashboard", href: "/dashboard", icon: LayoutDashboard },
     { name: "Trading", href: "/trading", icon: TrendingUp },
+    { name: "Top Traders", href: "/top-traders", icon: Users },
     { name: "Account", href: "/dashboard/account", icon: CreditCard },
   ]
 

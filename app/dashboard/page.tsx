@@ -8,7 +8,6 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { DashboardLayout } from "@/components/dashboard-layout"
 import { ArrowRight, ArrowUpRight, DollarSign, TrendingDown, TrendingUp, Users } from "lucide-react"
 import { TradingChart } from "@/components/trading-chart"
-import { TopTraders } from "@/components/top-traders"
 
 export default function DashboardPage() {
   const [selectedStock] = useState("COALINDIA")
@@ -77,22 +76,17 @@ export default function DashboardPage() {
           </Card>
         </div>
 
-        <div className="grid gap-4 md:grid-cols-3">
-          <Card className="md:col-span-2">
-            <CardHeader>
-              <CardTitle>Account Overview</CardTitle>
-              <CardDescription>Performance chart</CardDescription>
-            </CardHeader>
-            <CardContent>
-              <div className="h-[400px] w-full">
-                <TradingChart symbol={selectedStock} theme="dark" />
-              </div>
-            </CardContent>
-          </Card>
-          <div className="md:col-span-1">
-            <TopTraders />
-          </div>
-        </div>
+        <Card>
+          <CardHeader>
+            <CardTitle>Account Overview</CardTitle>
+            <CardDescription>Performance chart</CardDescription>
+          </CardHeader>
+          <CardContent>
+            <div className="h-[400px] w-full">
+              <TradingChart symbol={selectedStock} theme="dark" />
+            </div>
+          </CardContent>
+        </Card>
       </div>
     </DashboardLayout>
   )

@@ -481,7 +481,7 @@ export default function TradingPageWireframe() {
                         </SelectContent>
                       </Select>
                     </div>
-                    <div className="overflow-x-auto">
+                                          <div className="overflow-x-auto">
                       <table className="w-full border-collapse">
                         <thead>
                           <tr className="border-b border-gray-800">
@@ -674,7 +674,7 @@ export default function TradingPageWireframe() {
                     <Checkbox
                       id="stop-loss"
                       checked={enableStopLoss}
-                      onCheckedChange={setEnableStopLoss}
+                      onCheckedChange={(checked) => setEnableStopLoss(checked === true)}
                       className="border-gray-800"
                     />
                     <label htmlFor="stop-loss" className="text-sm font-medium text-white">
@@ -695,7 +695,7 @@ export default function TradingPageWireframe() {
                     <Checkbox
                       id="target"
                       checked={enableTarget}
-                      onCheckedChange={setEnableTarget}
+                      onCheckedChange={(checked) => setEnableTarget(checked === true)}
                       className="border-gray-800"
                     />
                     <label htmlFor="target" className="text-sm font-medium text-white">
